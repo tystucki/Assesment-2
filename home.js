@@ -26,10 +26,10 @@
 //     console.log(`Welcome back, ${name}`)
 // }
 // greetUser('andrew')
-let greetUser = (username) => {
-    console.log(`Welcome back, ${username}`)
+const greetUser = (username) => {
+    return `Welcome back, ${username}`
 }
-greetUser('Tailor')
+console.log(greetUser('Andrew'))
 
 // let greetUser = (username) => {
 //     if greetUser === username {
@@ -139,8 +139,9 @@ const deals = [
 
 //CODE HERE
 
-console.log(deals[0].title.replace('15%', '10%'))
-
+console.log(deals[0].title)
+deals[0].title = deals[0].title.replace('15%', '10%')
+console.log(deals)
 
 /*
     The restaurant is going to continue its
@@ -156,5 +157,8 @@ console.log(deals[0].title.replace('15%', '10%'))
 */
 
 //CODE HERE
-deals[1].desc.replace('March', 'April')
-console.log(deals)
+
+console.log(deals[1].desc)
+
+deals[1].desc = deals[1].desc.trim().replace('March', 'April')
+console.log(deals[1].desc)

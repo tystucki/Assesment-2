@@ -100,8 +100,49 @@ console.log(category)
 */
 
 //CODE HERE
-let foodArr = ['cheese', '$7.99', 9, 4, 'dinner']
-console.log(foodArr)
+const foodArr = [
+    {
+        name: 'pizza', 
+        price: 9.99, 
+        category: 'entree', 
+        popularity: 1, 
+        rating: 4.7, 
+        tags: ['customer favorite', 'kids', 'gluten-free option']
+    }, 
+    {
+        name: 'boneless wings', 
+        price: 8.99, 
+        category: 'entree', 
+        popularity: 3, 
+        rating: 4.8, 
+        tags: ['customer favorite']
+    }, 
+    {
+        name: 'french fries', 
+        price: 7.99, 
+        category: 'side', 
+        popularity: 4, 
+        rating: 4.4, 
+        tags: ['gluten-free option']
+    }, 
+    {
+        name: 'pie', 
+        price: 2.99, 
+        category: 'dessert', 
+        popularity: 2, 
+        rating: 5.0, 
+        tags: ['customer favorite', 'kids']
+    }, 
+    {
+        name: 'nachos', 
+        price: 6.99, 
+        category: 'side', 
+        popularity: 5, 
+        rating: 4.6, 
+        tags: ['customer favorite', 'kids']
+    }
+]
+// console.log(foodArr)
 
 
 //////////////////PROBLEM 4////////////////////
@@ -117,15 +158,19 @@ console.log(foodArr)
 */
 
 //CODE HERE
-contains(foodArr, 'cheese', result => {
-    if(result === true) {
-        console.log('cheese is in the array')
-    } else {
-        console.log('cheese is not in the array')
-    }
-})
+// contains(foodArr, 'cheese', result => {
+//     if(result === true) {
+//         console.log('cheese is in the array')
+//     } else {
+//         console.log('cheese is not in the array')
+//     }
+// })
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((food) => {
+    if(food.tags.includes('kids')){
+        return food }
+    })
+    console.log(filteredFood)
 
 
 
@@ -169,7 +214,16 @@ contains(foodArr, 'cheese', result => {
 */
 
 //CODE HERE
-
+const filterByProperty = (property, number, type) => {
+    const filteredFood = foodArr.filter((food) => {
+        if(type === 'above'){
+            return food[property] >= number
+        } else {
+            return food[property] <= number
+        }
+    })
+    return filteredFood
+}
 
 
 /*
@@ -180,3 +234,4 @@ contains(foodArr, 'cheese', result => {
 */
 
 //CODE HERE
+console.log(filterByProperty('popularity', 3, 'below'))
