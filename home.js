@@ -22,11 +22,14 @@
 */
 
 //CODE HERE
-function greetUser(name) {
-    console.log(`Welcome back, ${name}`)
+// function greetUser(name) {
+//     console.log(`Welcome back, ${name}`)
+// }
+// greetUser('andrew')
+let greetUser = (username) => {
+    console.log(`Welcome back, ${username}`)
 }
-greetUser('andrew')
-let username = []
+greetUser('Tailor')
 
 // let greetUser = (username) => {
 //     if greetUser === username {
@@ -136,6 +139,7 @@ const deals = [
 
 //CODE HERE
 
+console.log(deals[0].title.replace('15%', '10%'))
 
 
 /*
@@ -152,3 +156,5 @@ const deals = [
 */
 
 //CODE HERE
+deals[1].desc.replace('March', 'April')
+console.log(deals)

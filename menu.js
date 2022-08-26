@@ -31,8 +31,7 @@
 */
 
 //CODE HERE
-const pizza = [
-    {
+let pizza = {
         name: 'pepporoni',
         price: 9.99,
         category: 'lunch',
@@ -40,7 +39,7 @@ const pizza = [
         rating: 5,
         tags: ['family', 'kids', 'gluten-free']
     }
-]
+
 console.log(pizza)
 
 //////////////////PROBLEM 2////////////////////
@@ -52,7 +51,8 @@ console.log(pizza)
 */
 
 //CODE HERE
-console.log(pizza)
+console.log(pizza.popularity)
+
 
 
 
@@ -64,8 +64,7 @@ console.log(pizza)
 */
 
 //CODE HERE
-
-
+console.log(pizza.tags[1])
 /*
     Third, destructure the price off of the
     pizza object.
@@ -74,7 +73,8 @@ console.log(pizza)
 */
 
 //CODE HERE
-
+delete pizza.price
+console.log(pizza)
 
 /*
     Fourth, and last, destructure the category
@@ -84,7 +84,8 @@ console.log(pizza)
 */
 
 //CODE HERE
-
+let {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -99,7 +100,8 @@ console.log(pizza)
 */
 
 //CODE HERE
-
+let foodArr = ['cheese', '$7.99', 9, 4, 'dinner']
+console.log(foodArr)
 
 
 //////////////////PROBLEM 4////////////////////
@@ -115,6 +117,13 @@ console.log(pizza)
 */
 
 //CODE HERE
+contains(foodArr, 'cheese', result => {
+    if(result === true) {
+        console.log('cheese is in the array')
+    } else {
+        console.log('cheese is not in the array')
+    }
+})
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
@@ -160,6 +169,7 @@ console.log(pizza)
 */
 
 //CODE HERE
+
 
 
 /*

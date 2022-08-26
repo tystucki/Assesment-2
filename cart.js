@@ -34,10 +34,7 @@ const cart = [
 ]
 
 //CODE HERE
-console.log(cart)
-const totals = (products, prices) => {
-    
-}
+
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
@@ -82,7 +79,18 @@ const totals = (products, prices) => {
 */
 
 /*
-    TEXT ANSWER HERE
+    Lets say that my customer owns a pizza shop
+    We would need to include the properties listed below.
+    -Each pizza, toppings, sauces
+    -The zipcodes we deliver too.
+    -If you could be alergic to the following ingridients
+    -Prices
+    -Local favorites
+
+    the reason why I chose these is because its important to see the types of pizzas offered, if we deliver we need to 
+    let customers know where we deliver too.
+    Its important to have allergies as a property because this way we can filter if our food may cause problems
+    last would be local favorites this way we can filter by the best pizzas
 
 */
 
